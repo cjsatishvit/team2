@@ -1,4 +1,3 @@
-<!-- This is the front end page that the bank manager's login will have which will be used to view the approved bidders list sent by the loan officer -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>

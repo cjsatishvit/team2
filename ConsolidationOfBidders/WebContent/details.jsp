@@ -1,4 +1,3 @@
-<!-- This page takes details for the application form so that the bidder can be checked by the loan officer before being approved to take part in the auction -->
 <html>
 <head>
 <title>APPLICATION FORM</title>
@@ -20,22 +19,22 @@ TYPE OF ITEM:<br/>
 <input type="radio" name="rf" value="jewellery">JEWELS
 <br/>
 <br/>
-AADHAR NUMBER:<br/><input type="text" name="aadhar"/>
+AADHAR NUMBER:<br/><input type="text" name="aadhar" required/>
 <br/>
 <br/>
-AGE:<br/><input type="text" name="age"/>
+AGE:<br/><input type="text" name="age" required/>
 <br/>
 <br/>
-ADDRESS:<br/><input type="text" name="address"/>
+ADDRESS:<br/><input type="text" name="address" required/>
 <br/>
 <br/>
-MONTHLY SALARY:<br/><input type="number" name="salary"/>
+MONTHLY SALARY:<br/><input type="number" name="salary" required/>
 <br/>
 <br/>
-BANK BALANCE:<br/><input type="number" name="bank balance"/>
+BANK BALANCE:<br/><input type="number" name="bank balance" required/>
 <br/>
 <br/>
-PREVIOUS EXPERIENCE (YES/NO):<br/><input type="text" name="prev"/>
+PREVIOUS EXPERIENCE (YES/NO):<br/><input type="text" name="prev" required/>
 <br/>
 <br/>
 <input type="submit" value="submit"/>

@@ -1,4 +1,3 @@
-<!-- Registered bidders will login via this page to access the application form for the auction -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -15,10 +14,10 @@
 <div>
 <form action="controllerservlet" method="GET">
 <input type="hidden" name="command" value="LOGIN" />
-BUYER ID:<br/><input type="text" name="buyer id"/>
+BUYER ID:<br/><input type="text" name="buyer id" required/>
 <br/>
 <br/>
-PASSWORD:<br/><input type="password" name="pwd"/>
+PASSWORD:<br/><input type="password" name="pwd" required/>
 <br/>
 <br/>
 <input type="submit" value="login"/>

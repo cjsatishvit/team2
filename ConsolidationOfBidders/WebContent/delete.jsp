@@ -1,4 +1,3 @@
-<!-- This page takes in the buyer id of the bidder whose application the loan officer wants to reject,the corresponding application is deleted and the controller moves to the send mail page so that the rejected bidder can be notified -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>

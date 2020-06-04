@@ -1,4 +1,3 @@
-<!-- Displays the list of bidder application which the loan officer can inspect and accept or reject -->
 <%@page import="bidder.Bidderapplication"%> 
 <%@page import="java.util.ArrayList"%> 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>

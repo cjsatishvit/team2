@@ -1,4 +1,3 @@
-<!-- Displays the list of approved bidders by the loan officer ,the page can be accessed only by the bank manager in his login -->
 <%@page import="bidder.Bidderapplication"%> 
 <%@page import="java.util.ArrayList"%> 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>

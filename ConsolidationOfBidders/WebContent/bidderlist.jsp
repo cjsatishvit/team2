@@ -1,4 +1,3 @@
-<!-- Connects to page to view and delete bidders by the loan officer -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
