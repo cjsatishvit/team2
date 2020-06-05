@@ -14,7 +14,12 @@
 		<table
 			style="background-color: powderblue; margin-left: 370px; margin-top: 60px">
 			<tr>
-				<td>Username :</td>
+				<td><h3 style="color:red;">${message}</h3>
+				<h3 style="color:green;">${successmessage}</h3></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>UserName :</td>
 				<td><input type="text" name="name"></td>
 			</tr>
 			<tr>
