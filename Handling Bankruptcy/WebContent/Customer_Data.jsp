@@ -6,7 +6,7 @@
 String id = request.getParameter("userid");
 String driver = "com.mysql.jdbc.Driver";
 String connectionUrl = "jdbc:mysql://localhost:3306/";
-String database = "defaulters";
+String database = "bankruptcy";
 String userid = "root";
 String password = "";
 try {
@@ -41,7 +41,6 @@ ResultSet resultSet = null;
 <td>Loan_id</td>
 <td>Bankruptcy_id</td>
 <td>Phone_Number</td>
-<td>View Document</td>
 <td>Accept/Reject</td>
 
 
@@ -51,9 +50,9 @@ ResultSet resultSet = null;
 </center>
 <%
 try{
-connection = DriverManager.getConnection(connectionUrl+database, userid, password);
+connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bankruptcy","root", "1234");
 statement=connection.createStatement();
-String sql ="SELECT * FROM `DEFAULTERLIST`";
+String sql ="SELECT * FROM `applicants`";
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 %>
@@ -63,9 +62,6 @@ while(resultSet.next()){
 <td><%=resultSet.getString("LoanId") %></td>
 <td><%=resultSet.getString("BankruptcyId") %></td>
 <td><%=resultSet.getString("Phone") %></td>
-  <td>
-    <a href="https://formdownload.org/wp-content/uploads/2013/04/State-of-Alabama-Bankruptcy-Proof-of-Claim-Form.pdf">View Document</a>
-  </td>
 <td>
       
           <a href="Accept.jsp">Accept</a>/

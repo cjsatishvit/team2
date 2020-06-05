@@ -5,8 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
-import bankruptcygenerations.DB_Connection2;
+import bankruptcygenerations.DB_Connection3;
 import bankruptcygenerations.User_Bean;
 import Bankruptcy.Read_Values;
 
@@ -19,8 +18,8 @@ public class Read_Values {
 	
 	
 	public List<User_Bean> get_values(){
-		DB_Connection2 obj_DB_Connection2=new DB_Connection2();
-		Connection connection=obj_DB_Connection2.get_connection();
+		DB_Connection3 obj_DB_Connection3=new DB_Connection3();
+		Connection connection=obj_DB_Connection3.get_connection();
 		
 		PreparedStatement ps=null;
 		ResultSet rs=null;
@@ -28,7 +27,7 @@ public class Read_Values {
 		 List<User_Bean> list=new ArrayList<User_Bean>();
 		
 		try {
-			String querry="select * from defaulters.DEFAULTERLIST";
+			String querry="select * from bankruptcy.applicants";
 			ps=connection.prepareStatement(querry);		
 			rs=ps.executeQuery();
 			

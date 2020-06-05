@@ -31,7 +31,7 @@ public class UpdateStatus extends HttpServlet {
 		setC(cs.getCollector(cid, lid, aid, amount, selling_price, collateral_info));
 		if (submitType.equals("Submit")) {
 			request.setAttribute("message",
-					"Data Entry Successful! Loan amount reduced by: " + amount + " for Customer ID: " + cid);
+					"Loan amount reduced by: " + amount + " for Customer ID: " + cid);
 			request.getRequestDispatcher("updateStatus.jsp").forward(request, response);
 		} else {
 			request.setAttribute("message", "Data Not Found!");

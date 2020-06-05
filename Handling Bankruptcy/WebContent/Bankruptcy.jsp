@@ -22,7 +22,7 @@
 <center><h3><font face = "Verdana" size = "6">Apply For Bankruptcy</font></h3></center>
 <center>
                 <div align ="center" style="width:450px; height:300px; background: #81DAF5;border-radius: 40px;">
-<form action="controller/insert_notice.jsp">
+<form action="controller/insert.jsp">
 
 <table border="1">
  <pre><br><br><br>

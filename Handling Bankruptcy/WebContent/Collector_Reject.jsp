@@ -6,9 +6,9 @@
 String id = request.getParameter("userid");
 String driver = "com.mysql.jdbc.Driver";
 String connectionUrl = "jdbc:mysql://localhost:3306/";
-String database = "defaulters";
+String database = "bankruptcy";
 String userid = "root";
-String password = "";
+String password = "1234";
 try {
 Class.forName(driver);
 } catch (ClassNotFoundException e) {
@@ -41,6 +41,8 @@ ResultSet resultSet = null;
 <td>Loan_id</td>
 <td>Bankruptcy_id</td>
 <td>Phone_Number</td>
+<td>Status</td>
+
 
 
 
@@ -51,9 +53,9 @@ ResultSet resultSet = null;
 </center>
 <%
 try{
-connection = DriverManager.getConnection(connectionUrl+database, userid, password);
+connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bankruptcy","root", "1234");
 statement=connection.createStatement();
-String sql ="SELECT * FROM `collector_rej`";
+String sql =" select * from status where Status = 'Rejected'";
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 %>
@@ -63,6 +65,7 @@ while(resultSet.next()){
 <td><%=resultSet.getString("LoanId") %></td>
 <td><%=resultSet.getString("BankruptcyId") %></td>
 <td><%=resultSet.getString("Phone") %></td>
+<td><%=resultSet.getString("Status") %></td>
 
 </tr>
 <%

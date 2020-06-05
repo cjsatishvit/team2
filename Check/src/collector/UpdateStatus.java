@@ -27,23 +27,32 @@ public class UpdateStatus extends HttpServlet {
 		loan.setCid(cid);
 	    loan.setLid(lid);
 		
+	    String paid="Paid";
+	    //String ptr=null;
 		
 		String submitType = request.getParameter("submit");//changed from submit
 		loan = loanDAO.getLoan(cid, lid, days);
 		loan.setDays(days);
 		LoanProcessor loanProcessor= new LoanProcessor();
+		
+		System.out.println(loan.getStatus());
+		
 		boolean isDaysRangeValid = loanProcessor.checkDaysConstraint(loan);
 		if(!isDaysRangeValid)
 		{
 			message="Invalid Days Range: For Promise to Pay 1: days between 1 and 15 and For Promise to Pay 2: days between 1 and 5";
 		}
+		else if(loan.getStatus()==null)
+        {
+			message= "Invalid data entry";
+		}
+		else if(loan.getStatus().equals(paid))
+        {
+			message= "Loan is already "+loan.getStatus();
+		}
 		else if(loan!=null && loan.getPromiseCounter()>=2)
 		{
 			message="Promise to Pay Denied!!!";
-		}
-		else if(loan.getStatus()=="Paid")
-        {
-			message= "Loan is "+loan.getStatus();
 		}
 		else{
 			System.out.println("Testing");
@@ -75,9 +84,13 @@ public class UpdateStatus extends HttpServlet {
 			int newPromiseCounter=loan.getPromiseCounter()+1;
 			loan.setPromiseCounter(newPromiseCounter);
 			//loan.setPromiseCounter(loan.getPromiseCounter());
-			System.out.println("**Updating loan object"+newPromiseCounter);
-			loanDAO.updateLoan(loan);
-			System.out.println("Updated loan object successfully");
+			
+			
+//			System.out.println("**Updating loan object"+newPromiseCounter);
+//			loanDAO.updateLoan(loan);
+//			System.out.println("Updated loan object successfully");
+			
+			
 //			loan = loanDAO.getLoan(cid, lid, days);
 //			System.out.println("Getting Loan");
 		
@@ -86,10 +99,12 @@ public class UpdateStatus extends HttpServlet {
 			
 			
 			Calendar cal = Calendar.getInstance();
-	        cal.add(Calendar.DATE, days);
+	        cal.add(Calendar.DATE, days);//for normal condition
+			//cal.add(Calendar.DATE, -1);//for checking Pending condition after Promise to Pay duration passes
 	        loan.setPromiseToPayEndDate(cal.getTime());
 			loan = loanProcessor.findStatus(loan);
-			if(loan.getStatus()=="Pending")
+			String pending="Pending";
+			if(loan.getStatus().equals(pending))
 			{
 				message= "Loan Status changed to "+ loan.getStatus();
 			}

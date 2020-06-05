@@ -1,7 +1,5 @@
 package bankruptcygenerations;
 
-import bankruptcygenerations.String;
-
 public class User_Bean {
 	private String FirstName;
 	private String LastName;
@@ -26,14 +24,15 @@ public class User_Bean {
 	public void setLoanId(String LoanId) {
 		this.LoanId = LoanId;
 	}
-	public String getBankruptyId() {
-		return BankruptyId;
-	}
-	public void setDefaulterId(String BankruptyId) {
-		this.BankruptyId = BankruptyId;
-	}
 	public String getPhone() {
 		return Phone;
+	}
+
+	public String getBankruptcyId() {
+		return BankruptcyId;
+	}
+	public void setBankruptcyId(String bankruptcyId) {
+		BankruptcyId = bankruptcyId;
 	}
 	public void setPhone(String Phone) {
 		this.Phone = Phone;

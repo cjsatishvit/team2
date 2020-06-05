@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <display-name>Foreclosure.Generation</display-name>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>HandlingBankruptcyNotices</display-name>
   <welcome-file-list>
-  <welcome-file>head.jsp</welcome-file>
-  <welcome-file>collector.jsp</welcome-file>
-  <welcome-file>listofloandefaulters.jsp</welcome-file>
-  <welcome-file>listofloanapplicants.jsp</welcome-file>
-  <welcome-file>add_defaulter.jsp</welcome-file>
- <welcome-file>Foreclosure.jsp</welcome-file>
-  <welcome-file>Success.jsp</welcome-file>
-  <welcome-file>Bank_Manager</welcome-file>
-  <welcome-file>View_Property.jsp</welcome-file>
-  
-  <welcome-file>index.html</welcome-file>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
+    <welcome-file>Form_all.jsp</welcome-file>
+    <welcome-file>Accept.jsp</welcome-file>
+    <welcome-file>Reject.jsp</welcome-file>
+    <welcome-file>Bankruptcy.jsp</welcome-file>
+    <welcome-file>Collector_Accept.jsp</welcome-file>
+    <welcome-file>Collector_Reject.jsp</welcome-file>
+    <welcome-file>Customer_Data.jsp</welcome-file>
+    <welcome-file>Form_Collector.jsp</welcome-file>
+    <welcome-file>Form_Customer.jsp</welcome-file>
+    <welcome-file>form.jsp</welcome-file>
+    <welcome-file>insert.jsp</welcome-file>
+    <welcome-file>Insert_NoticeValues.java</welcome-file>
+    <welcome-file>Insert_Values.java</welcome-file>
+    <welcome-file>noticegeneration.java</welcome-file>
+    <welcome-file>Read_Values.java</welcome-file>
+    <welcome-file>DB_Connection3.java</welcome-file>
+    <welcome-file>User_Bean.java</welcome-file>
+
+    
+    
   </welcome-file-list>
 </web-app>
