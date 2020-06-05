@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Auction</title>
+<title>Property Details</title>
 <style>
 body {
   background-color: black;
@@ -19,9 +19,9 @@ body {
 
 <h1>Auction Page</h1>
 
-<table style="margin-left:20px;margin-top:20px;border: 1px white;border-spacing:15px;width:100%;background-color:powderblue">
-<tr><td><img src="avatar.png" style="width:200px"></td><td><img src="avatar.png" style="width:200px"></td></tr>
-<tr><td>Property1</td><td>Property2</td></tr>
+<table style="margin-left:20px;margin-top:20px;border-width:1px;border-spacing:15px;width:100%;background-color:powderblue">
+<tr><td><img src="avatar.png" style="width:200px"></td><td>Bidder 1 - $20000</td></tr>
+<tr><td>Property1</td><td>Bidder 2 - $18000</td></tr>
 </table>
 </body>
 </html>
