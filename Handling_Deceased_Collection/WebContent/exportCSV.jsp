@@ -167,9 +167,9 @@ button {
 			fw.flush();
 			fw.close();
 			conn.close();
-			request.setAttribute("message", "Successfully Created CSV file.");
+			request.setAttribute("message", "Success.");
 		} catch (Exception e) {
-			request.setAttribute("message", "Oops! Error.");
+			request.setAttribute("message", "No data found.");
 			e.printStackTrace();
 		}
 		%>
